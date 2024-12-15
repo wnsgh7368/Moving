@@ -1,0 +1,32 @@
+# 모델 경로
+model_path: "models/best-2.pt"
+
+# 비디오 파일 경로
+video_path: "sample_data.mp4"
+
+# 출력 비디오 파일 경로
+output_path: "output/tracked_count_v1.mp4"
+
+# 데이터베이스 설정
+database:
+  host: "---"
+  user: "moving"
+  password: "---"
+  database: "moving"
+
+model:
+  device: 'cpu'
+  conf_threshold: 0.6
+  iou_threshold: 0.5
+  max_det: 50
+
+training:
+  batch_size: 4
+  num_workers: 2
+  pin_memory: false
+
+video:
+  resize_width: 640
+  resize_height: 640
+  skip_frames: 3
+  batch_size: 2
